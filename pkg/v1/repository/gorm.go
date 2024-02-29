@@ -15,7 +15,7 @@ func New(db *gorm.DB) interfaces.RepoInterface {
 }
 
 func (repo *Repo) Create(user models.User) error {
-	err := repo.db.Create(&user).Error
+	err := repo.db.Create(&user)
 	return err
 }
 
